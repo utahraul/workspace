@@ -1,0 +1,10 @@
+
+#************* CARGA DE FICHEROS IDIOMATICOS ****************
+aviso.carga.xml=Se carga el fichero de configuracion {0} en formato XML.
+aviso.carga.properties=Se carga el fichero de configuracion {0} en formato properties.
+
+aviso.modificacion.xml=Se modifica el fichero de condiguracion {0} XML\ncon las siguientes valores:\n{1}
+aviso.modificacion.properties=Se modifica el fichero de condiguracion {0} properties\ncon las siguientes valores:{1}
+#************* FIN CARGA DE FICHEROS IDIOMATICOS ****************
+
+aviso.evento.configuracion=Se ejecuta el evento correspondiente al boton {0}

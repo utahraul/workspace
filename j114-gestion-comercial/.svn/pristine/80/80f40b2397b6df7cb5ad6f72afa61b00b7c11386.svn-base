@@ -1,0 +1,66 @@
+#Field ResourceBundle: rb
+#Thu Jun 27 10:29:00 CEST 2013
+Ventana.almacen.text=Almacen
+Ventana.almacen_almacen.text=Almacen
+Ventana.almacen_articulos.text=Articulos
+Ventana.almacen_catalogo.text=Catalogo
+Ventana.archivo.text=Archivo
+Ventana.archivo_configuracion.text=Configuracion
+Ventana.archivo_salir.text=Salir Programa
+Ventana.ayuda.text=Ayuda
+Ventana.ayuda_acercade.text=Acerca de ...
+Ventana.ayuda_calculadora.text=Calculadora
+Ventana.ayuda_manual.text=Manual Aplicacion
+Ventana.clientes.text=Clientes
+Ventana.clientes_gestion.text=Gestion
+Ventana.clientes_historico.text=Historico
+Ventana.clientes_pedidos.text=Pedidos
+Ventana.listado_clientes.text=Listados
+Ventana.listadoclientes_activos.text=Activos
+Ventana.listadoclientes_morosos.text=Morosos
+Ventana.listadoclientes_bajas.text=Bajas
+Ventana.listado_vencimientos.text=Listados
+Ventana.listadovencimientos_facturacion.text=Facturacion
+Ventana.listadovencimientos_pendientes.text=Pendientes
+Ventana.listadovencimientos_morosidad.text=Morosidad
+Ventana.proveedores.text=Proveedores
+Ventana.proveedores_gestion.text=Gestion
+Ventana.proveedores_pedidos.text=Pedidos
+Ventana.proveedores_servicios.text=Servicios
+Ventana.vencimientos.text=Vencimientos
+Ventana.vencimientos_cobros.text=Cobros
+Ventana.vencimientos_flujo.text=Tesoreria
+Ventana.vencimientos_morosos.text=Morosos
+Ventana.vencimientos_pagos.text=Pagos
+
+Ventana.cierre.titulo=CIERRE DE PROGRAMA
+Ventana.cierre.mensaje=¿Desea salir del programa?
+
+# *********  VALORES PARA LA AYUDA EN LINEA DE LOS COMPONENTES
+ttt.almacen=Almacen
+ttt.almacen_almacen=Almacen
+ttt.almacen_articulos=Articulos
+ttt.almacen_catalogo=Catalogo
+ttt.archivo=Archivo
+ttt.archivo_configuracion=Configuracion
+ttt.archivo_salir=Salir Programa
+ttt.ayuda=Ayuda
+ttt.ayuda_acercade=Acerca de ...
+ttt.ayuda_calculadora=Calculadora
+ttt.ayuda_manual=Manual Aplicacion
+ttt.clientes=Clientes
+ttt.clientes_gestion=Gestion
+ttt.clientes_historico=Historico
+ttt.clientes_pedidos=Pedidos
+ttt.listado_clientes=Listados
+ttt.listado_vencimientos=Listados
+ttt.proveedores=Proveedores
+ttt.proveedores_gestion=Gestion
+ttt.proveedores_pedidos=Pedidos
+ttt.proveedores_servicios=Servicios
+ttt.vencimientos=Vencimientos
+ttt.vencimientos_cobros=Cobros
+ttt.vencimientos_flujo=Tesoreria
+ttt.vencimientos_morosos=Morosos
+ttt.vencimientos_pagos=Pagos
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!ELEMENT opciones_configuracion (fecha_actualizacion,autor,propiedades)>
+<!ELEMENT fecha_actualizacion (#PCDATA)>
+<!ELEMENT autor  (#PCDATA)>
+<!ELEMENT propiedades (rutas, opciones_usuario, permisos)>
+<!ELEMENT rutas (ruta_bitacora,ruta_ayuda,ruta_enginebirt,ruta_logsbirt,ruta_listados,ruta_serializacion,ruta_depuracion,ruta_seguridad,ruta_iconos)>
+<!ELEMENT ruta_bitacora (#PCDATA)>
+<!ELEMENT ruta_ayuda (#PCDATA)>
+<!ELEMENT ruta_enginebirt (#PCDATA)>
+<!ELEMENT ruta_logsbirt (#PCDATA)>
+<!ELEMENT ruta_listados (#PCDATA)>
+<!ELEMENT ruta_serializacion (#PCDATA)>
+<!ELEMENT ruta_depuracion (#PCDATA)>
+<!ELEMENT ruta_seguridad (#PCDATA)>
+<!ELEMENT ruta_iconos (#PCDATA)>
+<!ELEMENT opciones_usuario (idioma)>
+<!ELEMENT idioma EMPTY>
+<!ELEMENT permisos (permitir_idioma,modo_ejecucion)>
+<!ELEMENT permitir_idioma EMPTY>
+<!ELEMENT modo_ejecucion EMPTY>
+<!--  -->
+<!ATTLIST opciones_configuracion 
+	version CDATA #REQUIRED>
+<!ATTLIST idioma 
+	preferido CDATA #IMPLIED
+	defecto CDATA "es">
+<!ATTLIST permitir_idioma
+	permiso (si|no|s|n) #REQUIRED>
+<!ATTLIST modo_ejecucion
+	modalidad (d|p) #REQUIRED>
+	

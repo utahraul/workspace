@@ -1,0 +1,10 @@
+#Fichero de configuracion de appenders para LOG4J.
+#Modificando y adaptando el contenido de este fichero se podran configurar las opciones necesarias 
+
+
+log4j.rootCategory=info , consola
+
+log4j.appender.consola=org.apache.log4j.ConsoleAppender
+log4j.appender.consola.layout=org.apache.log4j.PatternLayout
+log4j.appender.consola.layout.ConversionPattern=%-5p %d{dd MM yyyy} %m%n
+

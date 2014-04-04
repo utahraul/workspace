@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="opciones_configuracion" type="opciones_configuracion" />
+	<xsd:complexType name="opciones_configuracion">
+		<xsd:sequence>
+			<xsd:element name="fecha_actualizacion" type="xsd:string" />
+			<xsd:element name="autor" type="xsd:string" />
+			<xsd:element name="propiedades" type="propiedades" />
+		</xsd:sequence>
+		<xsd:attribute name="version" use="required" type="xsd:decimal"/>
+	</xsd:complexType>
+	<xsd:complexType name="propiedades">
+		<xsd:sequence>
+			<xsd:element name="rutas" type="rutas" minOccurs="1"
+				maxOccurs="1">
+			</xsd:element>
+			<xsd:element name="opciones_usuario" minOccurs="1"
+				maxOccurs="1" type="idioma">
+			</xsd:element>
+			<xsd:element name="permisos" minOccurs="1" maxOccurs="1"
+				type="permisos">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="rutas">
+		<xsd:sequence>
+			<xsd:element name="ruta_bitacora" minOccurs="1"
+				maxOccurs="1" type="xsd:string" />
+			<xsd:element name="ruta_ayuda" minOccurs="1" maxOccurs="1"
+				type="xsd:string" />
+			<xsd:element name="ruta_enginebirt" minOccurs="1"
+				maxOccurs="1" type="xsd:string" />
+			<xsd:element name="ruta_logsbirt" minOccurs="1"
+				maxOccurs="1" type="xsd:string" />
+			<xsd:element name="ruta_listados" minOccurs="1"
+				maxOccurs="1" type="xsd:string" />
+			<xsd:element name="ruta_serializacion" minOccurs="1"
+				maxOccurs="1" type="xsd:string" />
+			<xsd:element name="ruta_depuracion" minOccurs="1"
+				maxOccurs="1" type="xsd:string" />
+			<xsd:element name="ruta_seguridad" minOccurs="1"
+				maxOccurs="1" type="xsd:string" />
+			<xsd:element name="ruta_iconos" minOccurs="1"
+				maxOccurs="1" type="xsd:string" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="idioma">
+		<xsd:sequence>
+			<xsd:element name="idioma" minOccurs="1" maxOccurs="1">
+				<xsd:complexType>
+					<xsd:attribute name="preferido" type="xsd:string"
+						use="required" />
+					<xsd:attribute name="defecto" type="xsd:string" use="required" />
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="permisos">
+		<xsd:sequence>
+			<xsd:element name="permitir_idioma" minOccurs="1"
+				maxOccurs="1">
+				<xsd:complexType>
+					<xsd:attribute name="permiso" use="required">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="SI" />
+								<xsd:enumeration value="NO" />
+								<xsd:enumeration value="S" />
+								<xsd:enumeration value="N" />
+								<xsd:enumeration value="si" />
+								<xsd:enumeration value="no" />
+								<xsd:enumeration value="s" />
+								<xsd:enumeration value="n" />
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="modo_ejecucion" minOccurs="1"
+				maxOccurs="1">
+				<xsd:complexType>
+					<xsd:attribute name="modalidad" use="required">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="p" />
+								<xsd:enumeration value="d" />
+								<xsd:enumeration value="P" />
+								<xsd:enumeration value="D" />
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
+
