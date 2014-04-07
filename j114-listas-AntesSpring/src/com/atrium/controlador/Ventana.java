@@ -17,9 +17,8 @@ import com.atrium.modelo.IGestion_Provincias;
 import com.atrium.modelo.Municipios;
 import com.atrium.modelo.Pais;
 import com.atrium.modelo.Provincias;
-import com.atrium.spring.Acceso_ApplicationContext;
 
-public class Ventana extends JFrame implements ItemListener, IVentana {
+public class Ventana extends JFrame implements ItemListener {
 	private JLabel eti_paises;
 	private JComboBox combo_paises;
 	private JLabel eti_provincias;
@@ -31,6 +30,10 @@ public class Ventana extends JFrame implements ItemListener, IVentana {
 		setBounds(100, 100, 500, 250);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
+
+		crear_Interface();
+
+		setVisible(true);
 	}
 
 	public void crear_Interface() {
@@ -39,8 +42,7 @@ public class Ventana extends JFrame implements ItemListener, IVentana {
 		getContentPane().add(eti_paises);
 
 		// ACCESO A LA CAPA MODELO
-		IGestion_Pais gestion_pais = Acceso_ApplicationContext
-				.getBean(IGestion_Pais.class);
+		IGestion_Pais gestion_pais = new Gestion_Pais();
 		List<Pais> lista = gestion_pais.consultar_Todos();
 		// TRATAMIENTO DE LA INFORMACION RECIBIDA
 		String tabla_paises[] = new String[lista.size() + 1];
@@ -76,8 +78,6 @@ public class Ventana extends JFrame implements ItemListener, IVentana {
 		combo_municipios.setBounds(237, 125, 170, 26);
 		getContentPane().add(combo_municipios);
 
-		setVisible(true);
-
 	}
 
 	/**
@@ -102,8 +102,7 @@ public class Ventana extends JFrame implements ItemListener, IVentana {
 		String codigo_provincia = provincia_seleccionadA.substring(
 				provincia_seleccionadA.indexOf("-") + 1).trim();
 		// CONSULTAMOS A EL MODELO LA INFORMACION A CARGAR
-		IGestion_Municipios gestion_municipios = Acceso_ApplicationContext
-				.getBean(IGestion_Municipios.class);
+		IGestion_Municipios gestion_municipios = new Gestion_Municipios();
 		List<Municipios> lista = gestion_municipios
 				.consultar_PorProvincias(new Integer(codigo_provincia));
 		// CREAMOS LOS DATOS DEL COMBO
@@ -131,8 +130,7 @@ public class Ventana extends JFrame implements ItemListener, IVentana {
 		// COMPROBAMOS SI ES ESPAÑA
 		if (codigo_pais.equals("73")) {
 			// CONSULTAMOS A EL MODELO LA INFORMACION A CARGAR
-			IGestion_Provincias gestion_provincia = Acceso_ApplicationContext
-					.getBean(IGestion_Provincias.class);
+			IGestion_Provincias gestion_provincia = new Gestion_Provincias();
 			List<Provincias> lista = gestion_provincia.consultar_Todos();
 			// CREAMOS LOS DATOS DEL COMBO
 			String tabla_provincias[] = new String[lista.size()];
