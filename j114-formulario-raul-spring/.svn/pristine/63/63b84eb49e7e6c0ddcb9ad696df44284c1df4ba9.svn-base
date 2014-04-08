@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE datos_formulario SYSTEM "./datos.dtd">
+<datos_formulario>
+	<fecha>25-3-2014</fecha>
+	<autor>Profesor</autor>
+	<formulario>
+		<nombre>Juan</nombre>
+		<apellido>Solves</apellido>
+		<calle>Alfonso XIII</calle>
+		<ciudad>Villaviosa</ciudad>
+	</formulario>
+</datos_formulario>

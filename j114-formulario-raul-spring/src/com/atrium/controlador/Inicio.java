@@ -10,7 +10,8 @@ public class Inicio {
 	public static void main(String[] args) {
 		ApplicationContext contexto = new ClassPathXmlApplicationContext(
 				"com/atrium/spring/applicationContext.xml");
-
+		
 		IVentana ventana = Acceso_ApplicationContext.getBean(IVentana.class);
 	}
+
 }

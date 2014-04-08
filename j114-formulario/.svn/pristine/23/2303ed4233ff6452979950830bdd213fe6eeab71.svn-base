@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-lazy-init="true" default-init-method="crear_Interface"
+	default-autowire="byName" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<!-- ACCESO GENERAL AL OBJETO APLICATIONCONTEXT DE SPRING -->
+	<bean id="contexto" class="com.atrium.spring.Acceso_ApplicationContext"
+		scope="singleton" lazy-init="false" />
+	<!-- CONTROLADOR DE LA APLICACION -->
+	<bean id="ventana" class="com.atrium.controlador.Ventana" scope="singleton" />
+	<!-- VISTA DE LA APLICACION -->
+	<bean id="formulario" class="com.atrium.vista.Formulario" scope="prototype" />
+
+	<!-- MODELO DE LA APLICACION -->
+	<bean id="gestion_datos" class="com.atrium.modelo.Gestion_Datos"
+		scope="prototype" />
+
+	<bean id="datos_dao" class="com.atrium.modelo.Datos_DAO" scope="prototype"
+		autowire="default" />
+
+</beans>

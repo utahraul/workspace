@@ -14,7 +14,7 @@ import com.atrium.modelo.Gestion_Datos;
 import com.atrium.modelo.IGestion_Datos;
 import java.awt.Font;
 
-public class Formulario extends JPanel implements ActionListener, IFormulario {
+public class Formulario extends JPanel implements ActionListener {
 
 	private JLabel eti_nombre;
 	private JTextField nombre_usuario;
@@ -30,12 +30,11 @@ public class Formulario extends JPanel implements ActionListener, IFormulario {
 	private JButton boton_salir;
 	private JLabel resultado;
 
-	private IGestion_Datos gestion_datos;
-
 	public Formulario() {
 		setLayout(null);
 		setBounds(0, 0, 394, 318);
 
+		crear_Interface();
 	}
 
 	public void crear_Interface() {
@@ -105,7 +104,7 @@ public class Formulario extends JPanel implements ActionListener, IFormulario {
 	}
 
 	public void leer_Datos() {
-//		IGestion_Datos gestion_datos = new Gestion_Datos();
+		IGestion_Datos gestion_datos = new Gestion_Datos();
 		Datos_DTO datos = gestion_datos.leer_Datos();
 		nombre_usuario.setText(datos.getNombre());
 		apellido_usuario.setText(datos.getApellido());
@@ -119,7 +118,7 @@ public class Formulario extends JPanel implements ActionListener, IFormulario {
 		datos_nuevos.setApellido(apellido_usuario.getText());
 		datos_nuevos.setCalle(direccion.getText());
 		datos_nuevos.setCiudad(ciudad.getText());
-//		IGestion_Datos gestion_datos = new Gestion_Datos();
+		IGestion_Datos gestion_datos = new Gestion_Datos();
 		boolean valido = gestion_datos.escribir_Datos(datos_nuevos);
 
 		if (valido) {
@@ -142,10 +141,4 @@ public class Formulario extends JPanel implements ActionListener, IFormulario {
 			System.exit(0);
 		}
 	}
-
-	// ACCESORES PARA SPRING
-	public void setGestion_datos(IGestion_Datos gestion_datos) {
-		this.gestion_datos = gestion_datos;
-	}
-
 }
