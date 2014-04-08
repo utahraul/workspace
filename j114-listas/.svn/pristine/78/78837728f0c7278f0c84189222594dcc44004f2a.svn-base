@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<!-- SINGLENTON QUE RESUELVE EL ACCESO EL APPLICATIONCONTEXT EN EL PROGRAMA -->
+	<bean id="contexto" class="com.atrium.spring.Acceso_ApplicationContext"
+		lazy-init="false" scope="singleton" />
+
+	<!-- CONTROLADOR GRAFICO UNICO DE LA APLICACION -->
+	<bean id="ventana" class="com.atrium.controlador.Ventana"
+		lazy-init="true" init-method="crear_Interface" />
+
+	<!-- FACAHADAS DE LA CAPA MODELO -->
+	<bean id="gestion_pais" class="com.atrium.modelo.Gestion_Pais"
+		scope="prototype" lazy-init="true" />
+
+	<bean id="gestion_provincias" class="com.atrium.modelo.Gestion_Provincias"
+		scope="prototype" lazy-init="true">
+		<constructor-arg index="0" ref="provincias_dao" />
+	</bean>
+
+	<bean id="gestion_Municipios" class="com.atrium.modelo.Gestion_Municipios"
+		scope="prototype" lazy-init="true">
+		<property name="municipios_dao" ref="municipios_dao" />
+	</bean>
+
+	<!-- DAOS DE LA PARTE DE MODELO PARA HIBERNATE -->
+	<bean id="pais_dao" class="com.atrium.modelo.dao.Pais_DAO" scope="prototype"
+		lazy-init="true" />
+	<bean id="provincias_dao" class="com.atrium.modelo.dao.Provincias_DAO"
+		scope="prototype" lazy-init="true" />
+	<bean id="municipios_dao" class="com.atrium.modelo.dao.Municipios_DAO"
+		scope="prototype" lazy-init="true" />
+</beans>

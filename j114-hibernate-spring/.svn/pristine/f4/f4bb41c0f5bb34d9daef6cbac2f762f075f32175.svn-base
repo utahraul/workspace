@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-autowire="byName"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+
+	<!-- CONEXION CON LA BASE DE DATOS -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation"
+			value="file:src/com/atrium/hibernate/hibernate.cfg.xml">
+		</property>
+	</bean>
+
+	<!-- ZONA DE DAOS -->
+	<bean id="usuario_dao" class="com.atrium.hibernate.dao.ext.Usuario_DAOEXT"
+		scope="prototype" />
+
+	<bean id="tareas_dao" class="com.atrium.hibernate.dao.TareasDAO"
+		scope="prototype" />
+
+	<bean id="rol_dao" class="com.atrium.hibernate.dao.RolesDAO"
+		scope="prototype" />
+
+	<!-- ZONAS DE FACHADAS -->
+	<bean id="gestion_usuarios" class="com.atrium.hibernate.modelo.Gestion_Usuario"
+		scope="prototype" />
+
+	<bean id="gestion_roles" class="com.atrium.hibernate.modelo.Gestion_Roles"
+		scope="prototype" />
+
+	<bean id="gestion_tareas" class="com.atrium.hibernate.modelo.Gestion_Tareas"
+		scope="prototype" />
+
+
+</beans>
