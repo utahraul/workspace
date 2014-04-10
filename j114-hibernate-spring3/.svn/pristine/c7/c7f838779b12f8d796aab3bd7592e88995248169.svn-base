@@ -1,0 +1,16 @@
+#MyEclipse Hibernate Properties
+#Wed Apr 09 13:32:34 CEST 2014
+genAnnotations=false
+profile=
+reStrategyClass=
+basePersistenceClass=
+useJavaTypes=true
+configFile=/j114-hibernate-spring3/src/com/atrium/hibernate/hibernate.cfg.xml
+keyGenerator=
+reSettingsFile=
+detectO2O=false
+createConfigFile=true
+genBasicCompId=false
+genVersionTag=false
+sessionFactoryId=
+detectM2M=false

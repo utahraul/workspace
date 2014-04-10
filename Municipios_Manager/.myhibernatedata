@@ -1,7 +1,7 @@
 #MyEclipse Hibernate Properties
-#Thu Apr 10 09:43:45 CEST 2014
+#Thu Apr 10 09:46:38 CEST 2014
 genBasicCompId=false
-sessionFactoryName=
+sessionFactoryName=com.atrium.hibernate.HibernateSessionFactory
 profile=
 daoSFId=sessionFactory
 jndiPath=
@@ -16,5 +16,5 @@ sessionFactoryId=
 basePersistenceClass=
 genAnnotations=false
 reSettingsFile=
-configFile=/j114-listas/src/com/atrium/hibernate/hibernate.cfg.xml
+configFile=/Municipios_Manager/src/com/atrium/hibernate/hibernate.cfg.xml
 createConfigFile=true

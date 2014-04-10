@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-autowire="byName" default-lazy-init="true"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
+
+	<!-- >>>>>>>>>>>>> ZONA DE PERSISTENCIA <<<<<<<<<<<<<<<<< -->
+
+	<!-- CONEXION PARA HIBERNATE -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation"
+			value="file:src/com/atrium/hibernate/hibernate.cfg.xml">
+		</property>
+	</bean>
+
+	<!-- ZONA DE DAOS -->
+	<bean id="municipio_dao" class="com.atrium.hibernate.MunicipiosDAO"
+		scope="prototype">
+
+	</bean>
+	<!-- FIN ZONA DE DAOS -->
+
+	<!-- ZONA DE FACHADAS -->
+	<bean id="gestion_municipios" class="com.atrium.hibernate.modelo.Gestion_Municipios"
+		scope="prototype" />
+	<!-- FIN ZONA DE FACHADAS -->
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager" />
+
+	<aop:config>
+		<aop:pointcut id="municipio_poincut"
+			expression="execution (* com.atrium.hibernate.modelo.Gestion_Municipios.*(..))" />
+		<aop:advisor advice-ref="municipio_advice" pointcut-ref="municipio_poincut" />
+	</aop:config>
+	<tx:advice id="municipio_advice">
+		<tx:attributes>
+			<tx:method name="*_Municipio" />
+		</tx:attributes>
+	</tx:advice>
+
+</beans>

@@ -39,4 +39,9 @@
 
 
 
-</beans>
+	<bean id="MunicipiosDAO"
+		class="com.atrium.hibernate.MunicipiosDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean></beans>
