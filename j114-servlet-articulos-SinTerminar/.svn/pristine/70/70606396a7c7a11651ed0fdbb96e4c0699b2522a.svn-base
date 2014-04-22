@@ -29,30 +29,24 @@
 		<table>
 			<tr>
 				<td>Codigo Articulo</td>
-				<td><input type="text" name="codigo_articulo"
-					value="${requestScope.articulo.codigoArticulo}" /></td>
+				<td><input type="text" name="codigo_articulo" /></td>
 			</tr>
 			<tr>
 				<td>Descripcion</td>
-				<td><input type="text" name="descripcion"
-					value="${requestScope.articulo.descripcionArticulo}" /></td>
+				<td><input type="text" name="descripcion" /></td>
 			</tr>
 			<tr>
 				<td>Precio unidad</td>
-				<td><input type="text" name="precio_unidad"
-					value="${requestScope.articulo.precioUnidadArticulo}" /></td>
+				<td><input type="text" name="precio_unidad" /></td>
 			</tr>
 			<tr>
 				<td>Stock</td>
-				<td><input type="text" name="stock"
-					value="${requestScope.articulo.cantidad}" /></td>
+				<td><input type="text" name="stock" /></td>
 			</tr>
 			<tr>
-				<td><input type="submit" value="Comprobar articulo" /></td>
+				<td><input type="submit" value="Comprobar articulo"/></td>
 			</tr>
 		</table>
 	</form>
-	${requestScope.error_proceso}
-
 </body>
 </html>
