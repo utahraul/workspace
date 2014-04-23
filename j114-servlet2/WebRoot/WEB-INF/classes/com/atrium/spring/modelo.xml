@@ -16,7 +16,7 @@
 		</property>
 	</bean>
 	<!-- ZONA DE DAOS -->
-	<bean id="usuarios_dao" class="com.atrium.hibernate.dao.UsuariosDAO"
+	<bean id="usuarios_dao" class="com.atrium.hibernate.dao.ext.Usuario_DAOEXT"
 		scope="prototype" />
 
 	<bean id="TareasDAO" class="com.atrium.hibernate.dao.TareasDAO"

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>j114-servlet2-3</display-name>
+  <servlet>
+    <description>Servicio de autenticacion de usuarios</description>
+    <servlet-name>Servlet_Login</servlet-name>
+    <servlet-class>com.atrium.servlet.Servlet_Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Servlet_Login</servlet-name>
+    <url-pattern>/Servlet_Login</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <description>En caso de que no se tenga la traduccion del alguno de los idiomas preferidos
+		se esteblece un idioma por defecto</description>
+    <filter-name>filtro_idioma</filter-name>
+    <filter-class>com.atrium.filtros.Filtro_Idioma</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>filtro_idioma</filter-name>
+    <url-pattern>/index.jsp</url-pattern>
+  </filter-mapping>
+  <listener>
+    <description>Tratamos la carga de los parametros propios de
+			configuracion</description>
+    <listener-class>com.atrium.eventos.Eventos_ServletContext</listener-class>
+  </listener>
+  <listener>
+    <description>Escuchador de Aplicacion atributos/creacion-destruccion
+		</description>
+    <listener-class>com.atrium.eventos.rastreo.Rastreo_Aplicacion</listener-class>
+  </listener>
+  <listener>
+    <description>Escuchador eventos de Sesion
+			atributos/creacion-destruccion/activacion</description>
+    <listener-class>com.atrium.eventos.rastreo.Rastreo_Sesiones</listener-class>
+  </listener>
+  <listener>
+    <description>Escuchador de Peticiones atributos/creacion-destruccion
+		</description>
+    <listener-class>com.atrium.eventos.rastreo.Rastreo_Peticiones</listener-class>
+  </listener>
+  <context-param>
+    <description>establece la ruta de los ficheros logs para su posterior uso en cualquier 
+		proceso necesario (registro de usuarios)
+		</description>
+    <param-name>ruta_logs</param-name>
+    <param-value>/directorio_logs</param-value>
+  </context-param>
+  <context-param>
+    <description>establece la ruta de la bitacora en depuracion que registra las operacion 
+		y su seguimiento
+		</description>
+    <param-name>ruta_seguimiento</param-name>
+    <param-value>/directorio_logs/seguimiento</param-value>
+  </context-param>
+  <context-param>
+    <description>establece el idioma inicial en caso de que el usuario trabaja con alguno 
+		del que no se posea traduccion</description>
+    <param-name>idioma_por_defecto</param-name>
+    <param-value>es</param-value>
+  </context-param>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:com/atrium/spring/modelo.xml</param-value>
+  </context-param>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
