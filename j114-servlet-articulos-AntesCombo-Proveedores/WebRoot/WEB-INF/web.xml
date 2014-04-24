@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>j114-servlet-articulos-AntesCombo-Proveedores</display-name>
+  <servlet>
+    <description>Servicio de consultas de articulos</description>
+    <servlet-name>Servlet_Articulos</servlet-name>
+    <servlet-class>com.atrium.servlet.Servlet_Articulos</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Servlet_Articulos</servlet-name>
+    <url-pattern>/Servlet_Articulos</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:com/atrium/spring/modelo.xml</param-value>
+  </context-param>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
