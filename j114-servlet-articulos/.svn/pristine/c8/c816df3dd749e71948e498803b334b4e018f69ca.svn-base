@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+                        "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	<short-name>mia</short-name>
+	<tag>
+		<name>combo_proveedores</name>
+		<tag-class>com.atrium.etiquetas.Combo_Proveedores</tag-class>
+		<body-content>tagdependent</body-content>
+		<description>GENERARACION DE UN COMBO CON TODOS LOS PROVEEDORES DE LA
+			BASE DE DATOS</description>
+	</tag>
+
+</taglib>
