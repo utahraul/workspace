@@ -6,6 +6,9 @@ import javax.swing.UIManager.LookAndFeelInfo;
 public class Inicio {
 
 	public static void main(String[] args) {
+
+		
+
 		// cargar el nuevo look and feel si se puede
 		// RECOGEMOS TODOS LOS LOOK DISPONIBLES EN LA VERSION DE JDK
 		LookAndFeelInfo tabla_laf[] = UIManager.getInstalledLookAndFeels();
@@ -22,8 +25,17 @@ public class Inicio {
 				}
 			}
 		}
+		
 		Ventana ventana = new Ventana();
 
+		// Colecciones coleccion = new Colecciones();
+		// coleccion.cargar_Lista();
+		// coleccion.ordenar_Lista();
+		// Integer menor = coleccion.coger_Menor();
+		// Integer mayor = coleccion.coger_Mayor();
+		// Integer media = coleccion.calcular_Media();
+
+		// System.out.println("");
 	}
 
 }

@@ -14,26 +14,24 @@ public class Colecciones {
 
 	public void cargar_Lista(Integer numero_nuevo) {
 		lista.add(numero_nuevo);
+
 	}
 
-	public void ordenar_Lista() {
+	public Integer ordenar_Lista() {
 		Collections.sort(lista);
+		return null;
 	}
 
 	public Integer coger_Menor() {
-		Integer salida = null;
-		if (!lista.isEmpty()) {
-			salida = lista.get(0);
+		Integer salida=null;
+		if(!lista.isEmpty()){
+			salida=lista.get(0);
 		}
 		return salida;
 	}
 
 	public Integer coger_Mayor() {
-		Integer salida = null;
-		if (!lista.isEmpty()) {
-			salida = lista.get(lista.size() - 1);
-		}
-		return salida;
+		return lista.get(lista.size() - 1);
 	}
 
 	public Integer calcular_Media() {
@@ -45,8 +43,8 @@ public class Colecciones {
 		Integer media = new Integer(total / numero_elementos);
 		return media;
 	}
-
-	public void vaciar_Lista() {
+	
+	public void vaciar_Lista(){
 		lista.clear();
 	}
 }

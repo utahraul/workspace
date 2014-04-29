@@ -66,9 +66,7 @@ public class Calculadora extends JFrame implements ActionListener {
 		setBounds(new Rectangle(100, 100, 300, 350));
 		getContentPane().setLayout(null);
 		setDefaultCloseOperation(this.EXIT_ON_CLOSE);
-
 		crear_Interface();
-
 		setVisible(true);
 	}
 
