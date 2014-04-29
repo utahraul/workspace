@@ -1,0 +1,44 @@
+package com.atrium.colecciones;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Colecciones {
+
+	private List<Integer> lista;
+
+	public Colecciones() {
+		lista = new ArrayList<Integer>();
+	}
+
+	public void cargar_Lista() {
+		lista.add(new Integer(7));
+		lista.add(new Integer(5));
+		lista.add(new Integer(3));
+		lista.add(new Integer(10));
+//		lista.add(new Integer(20));
+	}
+
+	public void ordenar_Lista() {
+		Collections.sort(lista);
+	}
+
+	public Integer coger_Menor() {
+		return lista.get(0);
+	}
+
+	public Integer coger_Mayor() {
+		return lista.get(lista.size() - 1);
+	}
+
+	public Integer calcular_Media() {
+		int total = 0;
+		for (Integer numero : lista) {
+			total = total + numero.intValue();
+		}
+		int numero_elementos = lista.size() - 1;
+		Integer media = new Integer(total / numero_elementos);
+		return media;
+	}
+}
