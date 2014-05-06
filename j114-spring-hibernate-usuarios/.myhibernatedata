@@ -1,0 +1,20 @@
+#MyEclipse Hibernate Properties
+#Tue May 06 12:31:33 CEST 2014
+sessionFactoryId=
+reSettingsFile=
+genVersionTag=false
+sessionFactoryName=
+profile=
+detectO2O=true
+genBasicCompId=false
+basePersistenceClass=
+detectM2M=true
+createConfigFile=true
+reStrategyClass=
+daoSFId=sessionFactory
+useJavaTypes=true
+genAnnotations=false
+springDaoFile=src/com/atrium/spring/modelo.xml
+jndiPath=
+configFile=/j114-spring-hibernate-usuarios/src/com/atrium/hibernate/hibernate.cfg.xml
+keyGenerator=assigned

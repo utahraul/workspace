@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-autowire="byName" default-lazy-init="true"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- ACCESO ESTATICO AL APPLICATIONXCONTEXT DE SPRING -->
+	<bean id="contexto" class="com.atrium.spring.Acceso_ApplicationContext"
+		scope="singleton" lazy-init="false" />
+
+	<!-- CONTROLADOR PRINCIPAL DE LA APLICACION -->
+	<bean id="formulario_usuario" class="com.atrium.controlador.Formulario_Usuario"
+		init-method="crear_Interface" scope="prototype" />
+
+
+</beans>
