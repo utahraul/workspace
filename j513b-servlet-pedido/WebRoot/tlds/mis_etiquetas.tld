@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+                        "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	<short-name>me</short-name>
+
+	<tag>
+		<name>consulta_c_pedido</name>
+		<tag-class>com.atrium.etiquetas.Consultar_C_Pedidos</tag-class>
+		<body-content>JSP</body-content>
+		<description>carga los clientes en la capa oculta del pedido
+		</description>
+	</tag>
+
+	<tag>
+		<name>consulta_articulos</name>
+		<tag-class>com.atrium.etiquetas.Consultar_A_Pedidos</tag-class>
+		<body-content>JSP</body-content>
+		<description>carga la capa con los articulos que se pueden usar en el
+			pedido
+		</description>
+		<attribute>
+			<name>campo_ordenacion</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>INDICARA EL CAMPO DE EL ARTICULO POR EL QUE SE ORDENA.
+				SOLO VALIDOS CODIGO DESCRIPCION.</description>
+		</attribute>
+		<attribute>
+			<name>sentido</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>INDICARA SI SE ORDENA EN DESCENTE O EN ASCENDENTE (d D
+				DESCENDENTE /a A ASCENDENTE)</description>
+		</attribute>
+	</tag>
+</taglib>

@@ -1,0 +1,41 @@
+/* ELIMINACION DE LOS MARGENES DE LAS CAPAS */
+div {
+	margin: 0px;
+	padding: 0px;
+}
+/* POSICIONAMIENTO DE LA CABECERA DEL PEDIDO*/
+#cabecera {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 650px;
+	height: 140px;
+	background-color: teal;
+}
+/* POSICIONAMIENTO DEL CUERPO DEL PEDIDO*/
+#cuerpo {
+	position: absolute;
+	top: 265px;
+	left: 5px;
+	width: 880px;
+	height: 255px;
+	overflow: scroll;
+	z-index: 0;
+	background-color: teal;
+}
+/* POSICIONAMIENTO DEL PIE DEL PEDIDO*/
+#pie {
+	position: absolute;
+	top: 550px;
+	left: 690px;
+	width: 180px;
+	height: 120px;
+	z-index: 0;
+	background-color: teal;
+}
+/*ESTILO GENERAL PARA LOS BOTONES DE LA PAGINA*/
+.boton {
+	color: maroon;
+	font-size: 12px;
+	font-family: Times New Roman
+}

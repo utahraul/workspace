@@ -1,0 +1,90 @@
+@CHARSET "ISO-8859-1";
+
+/* ELIMINACION DE LOS MARGENES DE LAS CAPAS */
+div {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* posicion y tamaño de la fecha del pedido*/
+#fecha_pedido {
+	position: absolute;
+	top: 170px;
+	left: 500px;
+	width: 150px;
+	height: 50px;
+	background-color: teal;
+}
+/* posicion y tamaño del numero de pedido*/
+#numero_pedido {
+	position: absolute;
+	top: 170px;
+	left: 50px;
+	width: 150px;
+	height: 50px;
+	background-color: teal;
+}
+/* capa para mostrar el icono de accion de ajax*/
+#capa_imagen {
+	position: absolute;
+	top: 10px;
+	left: 250px;
+	width: 100px;
+	height: 100px;
+	z-index: 100;
+}
+/* capa princnipal de la cabecera con los datos de la misma*/
+#capa_cabecera {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 650px;
+	height: 140px;
+	background-color: teal;
+}
+/* estilo para la capa de mostrar los mensajes del servidor*/
+#capa_error_cliente {
+	position: absolute;
+	top: 250px;
+	left: 200px;
+	width: 300px;
+	height: 100px;
+	background-color: rgb(152, 25, 37);
+	z-index: 1000;
+}
+
+/* estilos para la capa oculta con la informacion de clientes */
+#capa_cabecera_lista {
+	background-color: gray;
+	position: absolute;
+	top: 0px;
+	left: 250px;
+	width: 400px;
+	height: 25px;
+	z-index: 10;
+}
+
+th {
+	text-align: center;
+}
+
+#capa_lista_clientes {
+	background-color: silver;
+	position: absolute;
+	top: 25px;
+	left: 250px;
+	width: 400px;
+	height: 200px;
+	overflow: auto;
+	z-index: 10;
+}
+
+#capa_botones {
+	background-color: gray;
+	position: absolute;
+	top: 225px;
+	left: 250px;
+	width: 400px;
+	height: 25px;
+	z-index: 10;
+}
