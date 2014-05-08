@@ -1,0 +1,29 @@
+http://stackoverflow.com/questions/11033321/how-to-loop-tests-in-selenium-ide
+
+<html>
+<body>
+<table>
+<tbody>
+<tr>
+    <td>label</td>
+    <td>target1</td>
+    <td></td>
+</tr>
+<tr>
+    <td>clickAndWait</td>
+    <td>link=Report Now</td>
+    <td></td>
+</tr>
+<tr>
+    <td>clickAndWait</td>
+    <td>//input[@value='Send Spam Report(s) Now']</td>
+    <td></td>
+</tr>
+<tr>
+    <td>gotoLabel</td>
+    <td>target1</td>
+    <td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
