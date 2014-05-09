@@ -1,0 +1,67 @@
+@CHARSET "ISO-8859-1";
+
+.boton {
+	color: maroon;
+}
+/* encabezado del cuerpo del pedido*/
+#capa_cabecera_cuerpo_pedido {
+	position: absolute;
+	top: 240px;
+	left: 5px;
+	width: 880px;
+	height: 25px;
+}
+/* capa siempre presente del cuerpo del pedido */
+#capa_cuerpo_pedido {
+	background-color: teal;
+	position: absolute;
+	top: 265px;
+	left: 5px;
+	width: 880px;
+	height: 255px;
+	overflow: scroll;
+}
+
+#capa_botones_linea_pedido {
+	position: absolute;
+	top: 520px;
+	left: 5px;
+	width: 880px;
+	height: 25px;
+	background-color: teal;
+}
+
+#capa_lineas_pedido text {
+	text-align: right;
+}
+
+/*  estilos para el div que muestra los articulos */
+#capa_articulos {
+	background-color: green;
+	position: absolute;
+	top: 200px;
+	left: 250px;
+	width: 595px;
+	height: 250px;
+	z-index: 10;
+	visibility: visible;
+	overflow: scroll;
+}
+
+#capa_cabecera_articulos {
+	background-color: gray;
+	position: absolute;
+	top: 175px;
+	left: 250px;
+	width: 595px;
+	height: 25px;
+}
+
+#capa_botones_articulos {
+	background-color: gray;
+	position: absolute;
+	top: 450px;
+	left: 250px;
+	width: 595px;
+	height: 25px;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-autowire="byName" default-lazy-init="true"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation"
+			value="classpath:com/atrium/hibernate/hibernate.cfg.xml">
+		</property>
+	</bean>
+
+	<bean id="clientes_PedidoDAO" class="com.atrium.hibernate.dao.Clientes_PedidoDAO"
+		scope="prototype" />
+
+	<bean id="gestion_clientes" class="com.atrium.hibernate.modelo.Gestion_ClientesPedido"
+		scope="prototype" />
+
+</beans>

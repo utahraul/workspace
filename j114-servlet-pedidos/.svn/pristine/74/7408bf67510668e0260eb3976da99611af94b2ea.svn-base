@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>j114-servlet-pedidos</display-name>
+
+
+
+	<!-- ********** ZONA DE FILTROS ********** -->
+	<!-- PROCESOS DE INICIO DE APLICACION -->
+	<!-- FILTRO PARA ESTABLECER EL IDIOMA POR DEFECTO PARA CADA USUARIO -->
+	<filter>
+		<description>En caso de que no se tenga la traduccion del alguno de los idiomas preferidos
+		se esteblece un idioma por defecto</description>
+		<filter-name>filtro_idioma</filter-name>
+		<filter-class>com.atrium.filtros.Filtro_Idioma</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>filtro_idioma</filter-name>
+		<url-pattern>/index.jsp</url-pattern>
+	</filter-mapping>
+	<!-- FIN PROCESOS DE INICIO DE APLICACION -->
+	<!-- ********** FIN ZONA DE FILTROS ********** -->
+
+	<!-- ** ZONA DE PARAMETROS INICIALES DE CONFIGURACION DE LA APLICACION ** -->
+	<!-- ESTABLECEMOS EL IDIOMA (es ESPAÑOL en INGLES fr FRANCES) -->
+	<context-param>
+		<description>establece el idioma inicial en caso de que el usuario trabaja con alguno 
+		del que no se posea traduccion</description>
+		<param-name>idioma_por_defecto</param-name>
+		<param-value>es</param-value>
+	</context-param>
+	<!-- ** FIN ZONA PARAMETROS INICIALES CONFIGURACION DE LA APLICACION ** -->
+
+
+
+	<!-- **** ARRANQUE DE SPRING EN WEB (OBLIGATORIO) **** -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+  <servlet>
+    <description>Controlador general de peticiones AJAX</description>
+    <servlet-name>Controlador_Ajax</servlet-name>
+    <servlet-class>com.atrium.servlet.Controlador_Ajax</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Controlador_Ajax</servlet-name>
+    <url-pattern>/Controlar_PedidoAJAX</url-pattern>
+  </servlet-mapping>
+	<!-- PARAMETRO QUE INFORMA DEL NOMBRE Y POSICION DEL DESCRIPTOR DE SRPING -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:com/atrium/spring/modelo.xml,
+					classpath:com/atrium/spring/contextoJEE.xml
+		</param-value>
+	</context-param>
+	<!-- **** FIN ARRANQUE DE SPRING EN WEB (OBLIGATORIO) **** -->
+
+	<!-- MECANISMO DE ARRANQUE EN PRIMERA PETICION -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
