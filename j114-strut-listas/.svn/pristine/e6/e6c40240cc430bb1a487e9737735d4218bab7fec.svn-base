@@ -1,0 +1,5 @@
+# Resources for parameter 'com.atrium.idiomas.textos_es'
+# Project j114-strut-listas
+
+ajax.provincias=cargar_provincias
+ajax.municipios=cargar_municipios
