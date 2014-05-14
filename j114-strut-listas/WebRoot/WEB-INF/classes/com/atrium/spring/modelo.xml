@@ -20,6 +20,8 @@
 		scope="prototype" />
 	<bean id="provincia_dao" class="com.atrium.hibernate.dao.ProvinciasDAO"
 		scope="prototype" />
+	<bean id="municipio_dao" class="com.atrium.hibernate.dao.MunicipiosDAO"
+		scope="prototype" />
 	<!-- FIN ZONA DE DAOS -->
 
 	<!-- ZONA DE FACHADAS -->
@@ -27,7 +29,8 @@
 		scope="prototype" />
 	<bean id="gestion_provincias" class="com.atrium.hibernate.modelo.Gestion_Provincias"
 		scope="prototype" />
+	<bean id="gestion_municipios" class="com.atrium.hibernate.modelo.Gestion_Municipios"
+		scope="prototype" />
 	<!-- FIN ZONA DE FACHADAS -->
-
 
 </beans>
