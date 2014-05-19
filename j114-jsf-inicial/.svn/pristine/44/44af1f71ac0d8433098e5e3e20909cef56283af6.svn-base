@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core" lang="en">
+<h:head>
+	<title>JSF 2.2 Page</title>
+	<meta name="keywords" content="enter,your,keywords,here" />
+	<meta name="description" content="A short description of this page." />
+	<meta name="content-type" content="text/html; charset=UTF-8" />
+
+	<!--<link rel="stylesheet" type="text/css" href="styles.css">-->
+</h:head>
+<h:body>
+	<h:form id="formu_login">
+		<h:panelGrid id="panel_login" columns="2">
+			<h:outputText id="eti_nombre" value="Nombre:" />
+			<h:inputText id="nombre" value="#{login_bean.nombre_usuario}" />
+			<h:outputText id="eti_clave" value="Clave:" />
+			<h:inputText id="clave" value="#{login_bean.clave_usuario}" />
+			<h:commandButton id="boton" value="Comprobar"
+				action="#{login_bean.comprobar_Credenciales}"
+				actionListener="#{login_bean.evento_Boton}" />
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>
