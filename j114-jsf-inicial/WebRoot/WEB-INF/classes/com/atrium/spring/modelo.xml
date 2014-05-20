@@ -19,6 +19,13 @@
 	<!-- ZONA DE DAOS -->
 	<bean id="usuario_dao" class="com.atrium.hibernate.dao.UsuariosDAO"
 		scope="prototype" />
+	<bean id="pais_dao" class="com.atrium.hibernate.dao.PaisDAO"
+		scope="prototype" />
+	<bean id="provincias_dao" class="com.atrium.hibernate.dao.ProvinciasDAO"
+		scope="prototype" />
+	<bean id="municipio_dao" class="com.atrium.hibernate.dao.MunicipiosDAO"
+		scope="prototype" />
+
 	<bean id="TareasDAO" class="com.atrium.hibernate.dao.TareasDAO"
 		scope="prototype" />
 	<bean id="RolesDAO" class="com.atrium.hibernate.dao.RolesDAO"
@@ -28,5 +35,15 @@
 	<!-- ZONA DE FACHADAS -->
 	<bean id="gestion_usuarios" class="com.atrium.hibernate.modelo.Gestion_Usuario"
 		scope="prototype" />
+
+	<bean id="gestion_pais" class="com.atrium.hibernate.modelo.Gestion_Pais"
+		scope="prototype" />
+
+	<bean id="gestion_provincias" class="com.atrium.hibernate.modelo.Gestion_Provincias"
+		scope="prototype" />
+	<bean id="gestion_municipios" class="com.atrium.hibernate.modelo.Gestion_Municipios"
+		scope="prototype" />
 	<!-- FIN ZONA DE FACHADAS -->
+
+
 </beans>

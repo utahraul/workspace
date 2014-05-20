@@ -21,6 +21,9 @@
 		<mapping resource="com/atrium/hibernate/Roles.hbm.xml" />
 		<mapping resource="com/atrium/hibernate/Tareas.hbm.xml" />
 		<mapping resource="com/atrium/hibernate/Usuarios.hbm.xml" />
+		<mapping resource="com/atrium/hibernate/Pais.hbm.xml" />
+		<mapping resource="com/atrium/hibernate/Municipios.hbm.xml" />
+		<mapping resource="com/atrium/hibernate/Provincias.hbm.xml" />
 
 	</session-factory>
 
