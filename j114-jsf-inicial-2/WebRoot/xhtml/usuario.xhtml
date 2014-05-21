@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:fn="http://xmlns.jcp.org/jsp/jstl/functions" lang="en">
+<h:head>
+	<title>JSF 2.2 Page</title>
+	<meta name="keywords" content="enter,your,keywords,here" />
+	<meta name="description" content="A short description of this page." />
+	<meta name="content-type" content="text/html; charset=UTF-8" />
+
+	<!--<link rel="stylesheet" type="text/css" href="styles.css">-->
+</h:head>
+<h:body>
+	<f:loadBundledBundle var="idioma" basename=""/>
+	<h:form id="formu_usuario">
+		<h:panelGrid id="panel_usuario" columns="2">
+			<h:outputText id="eti_nombre" value="#{idioma['formu.usuario.nombre']}" />
+			<h:inputText id="nombre" value="#{usuario_bean.nombre_usuario}" />
+			<h:outputText id="eti_clave" value="#{idioma['formu.usuario.clave']}" />
+			<h:inputText id="clave" value="#{usuario_bean.clave_usuario}" />
+			<h:outputText id="eti_carpeta" value="#{idioma['formu.usuario.carpeta']}" />
+			<h:inputText id="carpeta"
+				value="#{usuario_bean.carpeta_documentacion}" />
+			<h:outputText id="eti_idioma" value="#{idioma['formu.usuario.idioma']}" />
+			<h:selectOneRadio id="idioma" value="#{usuario_bean.idioma_usuario}">
+				<f:selectItem id="idioma_es" itemLabel="Español" itemValue="es" />
+				<f:selectItem id="idioma_en" itemLabel="Inglés" itemValue="en" />
+				<f:selectItem id="idioma_fr" itemLabel="Francés" itemValue="fr" />
+			</h:selectOneRadio>
+			<h:outputText id="eti_fechaalta" value="Fecha alta:" />
+			<h:inputText id="fecha_alta" value="#{usuario_bean.fecha_alta}">
+				<f:convertDateTime type="date" pattern="dd/MM/yyyy" />
+			</h:inputText>
+			<h:outputText id="eti_fechabaja" value="Fecha baja:" />
+			<h:inputText id="fecha_baja" value="#{usuario_bean.fecha_baja}">
+				<f:convertDateTime type="date" pattern="dd/MM/yyyy" />
+			</h:inputText>
+			<h:outputText id="eti_rol" value="Rol Usuario:" />
+			<h:inputText id="rol" value="#{usuario_bean.rol_usuario}">
+				<f:convertDateTime type="number" integerOnly="true" />
+			</h:inputText>
+		</h:panelGrid>
+		
+		<h:panelGrid id="panel_botones" columns ="4">
+		<h:commandButton
+		</h:panelGrid>
+		
+</h:body>
+</html>
