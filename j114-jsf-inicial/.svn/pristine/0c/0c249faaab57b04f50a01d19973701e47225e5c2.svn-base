@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+	version="2.2">
+
+	<!-- ******* ZONA DE MANAGEDBEAN ********** -->
+	<!-- CONTROL DE CREDENCIALES -->
+	<managed-bean>
+		<description>GESTION DEL PROCESO DE AUTENTICACION DEL USUARIO</description>
+		<managed-bean-name>login_bean</managed-bean-name>
+		<managed-bean-class>com.atrium.managedbean.Login_Bean</managed-bean-class>
+		<managed-bean-scope>view</managed-bean-scope>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>listas_bean</managed-bean-name>
+		<managed-bean-class>com.atrium.managedbean.Listas_Bean</managed-bean-class>
+		<managed-bean-scope>view</managed-bean-scope>
+	</managed-bean>
+	<!-- CONTROL DEL PROCESO CRUD DE USUARIOS -->
+	<managed-bean>
+		<description>Gestion de los procesos de bd de usuarios</description>
+		<managed-bean-name>usuario_bean</managed-bean-name>
+		<managed-bean-class>com.atrium.managedbean.Usuario_Bean</managed-bean-class>
+		<managed-bean-scope>view</managed-bean-scope>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>idioma_bean</managed-bean-name>
+		<managed-bean-class>com.atrium.managedbean.Idioma_Bean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+
+	<!-- ******* FIN ZONA DE MANAGEDBEAN ********** -->
+
+	<!-- ****** DEFINICION DE VALIDADORES/CONVERSORES -->
+	<validator>
+		<description>COMPROBACION DE QUE LA SEGUNDA FECHA SEA MAYOR O IGUAL QUE LA PRIMERA</description>
+		<validator-id>validar_rangofechas</validator-id>
+		<validator-class>com.atrium.validadores.Validar_RangoFechas</validator-class>
+	</validator>
+
+	<!-- ******* ZONA DE NAVEGACION ****** -->
+	<navigation-rule>
+		<from-view-id>/xhtml/login.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>correcto</from-outcome>
+			<to-view-id>/xhtml/menu.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>incorrecto</from-outcome>
+			<to-view-id>/xhtml/login.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+</faces-config>

@@ -1,0 +1,98 @@
+#FORMULARIO LOGIN
+formu.login.eti.nombreusuario=User Name:
+formu.login.eti.claveusario=Password:
+formu.login.bot.comprobar=Login
+formu.login.eti.perfil=Perfiles:
+formu.login.eti.cabecerapanel=Confirmacion de credenciales
+
+error.login.nombre=There is no user WITH THAT NAME
+error.login.clave=The password is not CORRECT
+error.login.validacion=FORM FIELDS ARE REQUIRED
+
+error.login.validacionnombre=El nombre es obligatorio
+error.login.validacionclave=La clave es obligatoria
+#FIN FORMULARIO LOGIN
+#BANNER
+saludo.banner=SOY LA PAGINA INICIAL EN INGLES
+
+#FIN BANNER
+
+#TABLA DE COBROS
+
+eti.col.fechaalta=Ingreso Cobro
+eti.col.fechaprevista=Prevision Cobro
+eti.col.cantidad=Cantidad
+eti.col.entidad=Entidad
+
+#FIN TABLA DE COBROS
+
+#TABLA DE VENCIMIENTOS
+eti.fechainicial=Fecha inicial E
+eti.fechafinal=Fecha final E
+
+
+cab.codigo_venci=Num. Vencimiento E
+cab.cliente=Nombre Cliente E
+cab.fecha_venci=Fecha Prevista E
+cab.fecha_cobro=Fecha Efectiva E
+cab.fecha_emision=Fecha Emision E
+cab.cantidad=Cantidad E
+cab.pedido=Num. Pedido E
+cab.mostrar=Pedido E
+
+info.avancepagina=Siguiente pagina
+info.retorcesopagina=Pagina anterior
+info.primerapagina=Primera pagina
+info.ultimapagina=Ultima Pagina
+info.avancerapido=Avance rapido
+info.retrocesorapido=Retroceso rapido
+
+info.pie={0} Cobros en total, mostrando {1} cobros, desde el cobro {2} al {3}. Pagina {4} / {5}.
+#FIN TABLA DE VENCIMIENTOS
+
+
+#FORMULARIO DE MENU
+formu.menu.eti.entrada=Time in
+formu.menu.eti.sesion=Session
+
+menu.opcion.Registro=Registration
+menu.opcion.Seguimiento=Tracking
+menu.opcion.Administracion=Administration
+menu.opcion.Historico=Historic
+menu.opcion.Realizacion=Carrying out
+menu.opcion.Listadoderealizacion=Completion List
+menu.opcion.Listadodeconexiones=Online User Listings
+menu.opcion.Vencimientos=Expirations
+menu.opcion.Subidaficheros=Upload File
+
+menu.submenu.administracion=Administracion
+menu.submenu.listados=Listados
+menu.submenu.negocio=Negocio
+
+
+formu.menu.bot.salir=Disconnect
+
+#FIN FORMULARIO DE MENU
+
+
+# FORMULARIO DE USUARIOS
+formu.usuario.nombre=Nombre:
+formu.usuario.clave=Clave:
+formu.usuario.carpeta=Carpeta documentacio:
+formu.usuario.idioma=Idioma:
+formu.usuario.idiomaes=Español
+formu.usuario.idiomaen=Ingles
+formu.usuario.idiomafr=Frances
+formu.usuario.fechaalta=Fecha alta:
+formu.usuario.fechabaja=Fecha baja:
+formu.usuario.rol=Rol usuario:
+formu.usuario.botonalta=Alta
+formu.usuario.botonbaja=Baja
+formu.usuario.botonmodificacion=Modificacion
+formu.usuario.botonconsulta=Consulta
+
+error.conversion.fechaalta=El formato de la fecha de alta no es correcto (dd/MM/yyyy)
+error.conversion.fechabaja=El formato de la fecha de baja no es correcto (dd/MM/yyyy)
+error.validacion.fechabaja=La fecha de baja debe ser posterior al alta
+
+# FIN FORMULARIO DE USUARIOS
