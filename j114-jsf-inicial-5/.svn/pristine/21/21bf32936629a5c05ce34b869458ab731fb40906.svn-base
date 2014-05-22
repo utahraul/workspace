@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core" lang="en">
+<h:head>
+	<title>JSF 2.2 Page</title>
+	<meta name="keywords" content="enter,your,keywords,here" />
+	<meta name="description" content="A short description of this page." />
+	<meta name="content-type" content="text/html; charset=UTF-8" />
+
+	<!--<link rel="stylesheet" type="text/css" href="styles.css">-->
+</h:head>
+<h:body>
+	<f:loadBundle var="idioma" basename="#{idioma_bean.idioma_elegido}" />
+	<h:form id="formu_usuario">
+		<h:panelGrid id="panel_usuario" columns="3">
+			<h:outputText id="eti_nombre"
+				value="#{idioma['formu.usuario.nombre']}" />
+			<h:inputText id="nombre" value="#{usuario_bean.nombre_usuario}" />
+			<h:message for="nombre" />
+			<h:outputText id="eti_clave" value="#{idioma['formu.usuario.clave']}" />
+			<h:inputText id="clave" value="#{usuario_bean.clave_usuario}" />
+			<h:message for="clave" />
+			<h:outputText id="eti_carpeta"
+				value="#{idioma['formu.usuario.carpeta']}" />
+			<h:inputText id="carpeta"
+				value="#{usuario_bean.carpeta_documentacion}" />
+			<h:message for="carpeta" />
+			<h:outputText id="eti_idioma"
+				value="#{idioma['formu.usuario.idioma']}" />
+			<h:selectOneRadio id="idioma" value="#{usuario_bean.idioma_usuario}">
+				<f:selectItem id="idioma_es"
+					itemLabel="#{idioma['formu.usuario.idiomaes']}" itemValue="es" />
+				<f:selectItem id="idioma_en"
+					itemLabel="#{idioma['formu.usuario.idiomaen']}" itemValue="en" />
+				<f:selectItem id="idioma_fr"
+					itemLabel="#{idioma['formu.usuario.idiomafr']}" itemValue="fr" />
+			</h:selectOneRadio>
+			<h:message for="idioma" />
+			<h:outputText id="eti_fechaalta"
+				value="#{idioma['formu.usuario.fechaalta']}" />
+			<h:inputText id="fecha_alta" value="#{usuario_bean.fecha_alta}"
+				converterMessage="#{idioma['error.conversion.fechaalta']}">
+				<f:convertDateTime type="date" pattern="dd/MM/yyyy" />
+			</h:inputText>
+			<h:message for="fecha_alta" />
+			<h:outputText id="eti_fechabaja"
+				value="#{idioma['formu.usuario.fechabaja']}" />
+			<h:inputText id="fecha_baja" value="#{usuario_bean.fecha_baja}"
+				converterMessage="#{idioma['error.conversion.fechabaja']}">
+				<f:convertDateTime type="date" pattern="dd/MM/yyyy" />
+				<f:validator validatorId="validar_rangofechas" />
+			</h:inputText>
+			<h:message for="fecha_baja" />
+			<h:outputText id="eti_rol" value="#{idioma['formu.usuario.rol']}" />
+			<h:inputText id="rol" value="#{usuario_bean.rol_usuario}">
+				<f:convertNumber type="number" integerOnly="true" />
+			</h:inputText>
+			<h:message for="rol" />
+		</h:panelGrid>
+		<h:panelGrid id="panel_botones" columns="4">
+			<h:commandButton id="boton_alta"
+				actionListener="#{usuario_bean.alta_Usuario}"
+				value="#{idioma['formu.usuario.botonalta']}" />
+			<h:commandButton id="boton_baja"
+				actionListener="#{usuario_bean.baja_Usuario}"
+				value="#{idioma['formu.usuario.botonbaja']}" />
+			<h:commandButton id="boton_modificacion"
+				actionListener="#{usuario_bean.modificacion_Usuario}"
+				value="#{idioma['formu.usuario.botonmodificacion']}" />
+			<h:commandButton id="boton_consulta"
+				actionListener="#{usuario_bean.consulta_Usuario}"
+				value="#{idioma['formu.usuario.botonconsulta']}" />
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>
+
+
+
+

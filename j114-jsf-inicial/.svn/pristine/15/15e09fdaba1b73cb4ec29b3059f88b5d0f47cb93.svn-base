@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+	<h:panelGrid columns="3">
+		<h:form id="formu_idioma">
+			<h:commandButton id="idioma_es" image="/imagenes/es.png"
+				value="#{idioma_bean.boton_idioma}"
+				actionListener="#{idioma_bean.cambiar_Idioma}" />
+			<h:commandButton id="idioma_en" image="/imagenes/gb.png"
+				value="#{idioma_bean.boton_idioma}"
+				actionListener="#{idioma_bean.cambiar_Idioma}" />
+			<h:commandButton id="idioma_fr" image="/imagenes/fr.png"
+				value="#{idioma_bean.boton_idioma}"
+				actionListener="#{idioma_bean.cambiar_Idioma}" />
+		</h:form>
+	</h:panelGrid>
+
+</ui:composition>
