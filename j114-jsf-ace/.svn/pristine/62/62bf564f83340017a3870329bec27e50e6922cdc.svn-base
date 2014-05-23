@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:icecore="http://www.icefaces.org/icefaces/core"
+	xmlns:ace="http://www.icefaces.org/icefaces/components"
+	xmlns:ice="http://www.icesoft.com/icefaces/component">
+<h:head>
+	<title>ICEfaces</title>
+</h:head>
+<h:body>
+	<h:form id="formu_usuarios">
+		<ace:dataTable id="tabla_usuarios" rows="8" paginator="true"
+			paginatorPosition="bottom" value="#{usuarios_bean.lista_usuarios}"
+			var="usuario">
+			<ace:column id="col_nombre" headerText="Nombre">
+				<h:outputText id="nombre" value="#{usuario.nombreUsuario}" />
+			</ace:column>
+			<ace:column id="col_clave" headerText="Clave">
+				<h:outputText id="clave" value="#{usuario.password}" />
+			</ace:column>
+			<ace:column id="col_carpeta" headerText="Carpeta Documentacion">
+				<h:outputText id="carpeta" value="#{usuario.carpetaDocumentacion}" />
+			</ace:column>
+			<ace:column id="col_fechaalta" headerText="Alta">
+				<h:outputText id="alta" value="#{usuario.fechaAlta}">
+					<f:convertDateTime type="date" pattern="dd/MMMM/yyyy" />
+				</h:outputText>
+			</ace:column>
+			<ace:column id="col_fechabaja" headerText="Baja">
+				<h:outputText id="baja" value="#{usuario.fechaBaja}">
+					<f:convertDateTime type="date" pattern="dd/MMMM/yyyy" />
+				</h:outputText>
+			</ace:column>
+			<ace:column id="col_idioma" headerText="Idioma">
+				<h:outputText id="idioma" value="#{usuario.idioma}" />
+			</ace:column>
+			<ace:column id="col_rol" headerText="Rol usuario">
+				<h:outputText id="rol" value="#{usuario.roles.descripcionRol}" />
+			</ace:column>
+		</ace:dataTable>
+	</h:form>
+</h:body>
+</html>
