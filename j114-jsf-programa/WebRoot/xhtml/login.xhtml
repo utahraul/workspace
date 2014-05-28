@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:icecore="http://www.icefaces.org/icefaces/core"
+	xmlns:ace="http://www.icefaces.org/icefaces/components"
+	xmlns:ice="http://www.icesoft.com/icefaces/component">
+<h:head>
+	<title>ICEfaces</title>
+
+</h:head>
+<h:body>
+	<h:outputScript id="prueba" library="javascript" name="complemento.js" />
+	<ui:include src="/xhtml/idioma.xhtml" />
+	<ace:panel id="panel_login" visible="#{login_bean.login_visible}">
+		<h:form id="formu_login">
+			<h:panelGrid id="colocacion_login" columns="3">
+				<h:outputText id="eti_nombre"
+					value="#{idioma['formu.login.eti.nombreusuario']}" />
+				<h:inputText id="nombre" value="#{login_bean.nombre_usuario}"
+					required="true"
+					requiredMessage="#{idioma['error.login.validacionnombre']}" />
+				<h:message for="nombre" />
+				<h:outputText id="eti_clave"
+					value="#{idioma['formu.login.eti.claveusario']}" />
+				<h:inputText id="clave" value="#{login_bean.clave_usuario}"
+					required="true"
+					requiredMessage="#{idioma['error.login.validacionclave']}" />
+				<h:message for="clave" />
+				<h:commandButton id="boton_login"
+					value="#{idioma['formu.login.bot.comprobar']}"
+					actionListener="#{login_bean.comprobar_Credenciales}" />
+			</h:panelGrid>
+		</h:form>
+	</ace:panel>
+	<ace:panel id="panel_menus" visible="#{menu_bean.menu_visible}">
+		<h:form id="formulario_menus">
+			<ace:menuBar id="barra_menu" model="#{menu_bean.menu_dinamicoace}" />
+		</h:form>
+	</ace:panel>
+	<ace:panel id="panel_descargas">
+		<ui:include src="#{menu_bean.pagina_elegida}" />
+	</ace:panel>
+</h:body>
+</html>
