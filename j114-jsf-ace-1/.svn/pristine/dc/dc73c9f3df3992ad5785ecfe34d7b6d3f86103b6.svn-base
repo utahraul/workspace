@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:icecore="http://www.icefaces.org/icefaces/core"
+	xmlns:ace="http://www.icefaces.org/icefaces/components"
+	xmlns:ice="http://www.icesoft.com/icefaces/component">
+<h:head>
+	<title>ICEfaces</title>
+</h:head>
+<h:body>
+	<h:form id="formu_panelopciones">
+		<ace:panel id="panel_basico" header="Panel de prueba" closable="true"
+			toggleable="true" footer="texto de prueba para el pie de panel"
+			collapsed="true">
+			<h:outputText id="eti_panel"
+				value="Contenido de prueba para el panel basico." />
+			<h:form id="formu_panel">
+				<h:panelGrid id="panel_formulario" columns="2">
+					<h:outputText id="eti_nombre" value="Nombre:" />
+					<h:inputText id="nombre" />
+					<h:outputText id="eti_clave" value="Clave:" />
+					<h:inputText id="clave" />
+					<h:commandButton id="boton" value="Prueba" />
+				</h:panelGrid>
+			</h:form>
+
+			<f:facet name="options">
+				<ace:menu id="menu_pruebapanel">
+					<ace:submenu id="opciones_panel">
+						<ace:menuItem id="uno" value="Opcion uno" />
+						<ace:menuItem id="dos" value="Opcion dos" />
+						<ace:menuItem id="tres" value="opcion tres" />
+					</ace:submenu>
+				</ace:menu>
+			</f:facet>
+		</ace:panel>
+	</h:form>
+
+	<ace:dialog id="panel_dialogo" header="Ventana de dialog"
+		hideEffect="explode" modal="true" visible="true">
+		<h:outputText id="eti_prueba" value="Texto de prueba en dialogo" />
+	</ace:dialog>
+
+
+	<h:form id="formu_contenedores">
+		<ace:accordion id="acordeon">
+			<ace:accordionPane id="acor_uno" title="Acordeon uno">
+				<h:outputText id="eti_uno" value="Contenido acordeon uno" />
+			</ace:accordionPane>
+			<ace:accordionPane id="acor_dos" title="Acordeon dos">
+				<h:outputText id="eti_dos" value="Contenido acordeon uno" />
+			</ace:accordionPane>
+			<ace:accordionPane id="acor_tres" title="Acordeon tres">
+				<h:outputText id="eti_tres" value="Contenido acordeon uno" />
+			</ace:accordionPane>
+		</ace:accordion>
+
+		<ace:tabSet id="panel_pestañas">
+			<ace:tabPane id="pestaña_uno" label="Contenido uno">
+				<h:outputText id="eti_unop" value="Texto prueba uno" />
+			</ace:tabPane>
+			<ace:tabPane id="pestaña_dos" label="Contenido dos">
+				<h:outputText id="eti_dosp" value="Texto prueba dos" />
+			</ace:tabPane>
+			<ace:tabPane id="pestaña_tres" label="Contenido tres">
+				<h:panelGrid id="columna" columns="1">
+					<h:outputText id="eti_tresp" value="Texto prueba tres" />
+					<ace:richTextEntry id="procesador" />
+				</h:panelGrid>
+			</ace:tabPane>
+		</ace:tabSet>
+	</h:form>
+</h:body>
+</html>

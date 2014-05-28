@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
+	version="2.1">
+
+
+	<!-- ******* ZONA DE MANAGEDBEAN ********** -->
+	<!-- CONTROL DE CREDENCIALES -->
+	<managed-bean>
+		<description>GESTION DEL PROCESO DE AUTENTICACION DEL USUARIO</description>
+		<managed-bean-name>login_bean</managed-bean-name>
+		<managed-bean-class>com.atrium.managedbean.Login_Bean</managed-bean-class>
+		<managed-bean-scope>view</managed-bean-scope>
+	</managed-bean>
+
+	<!-- CONTROL DEL MENU DE LA APLICACION -->
+	<managed-bean>
+		<description>CREACION Y CONTROL DINAMICO DEL MENU DE USUARIO</description>
+		<managed-bean-name>menu_bean</managed-bean-name>
+		<managed-bean-class>com.atrium.managedbean.Menu_DinamicoBean</managed-bean-class>
+		<managed-bean-scope>view</managed-bean-scope>
+	</managed-bean>
+
+	<!-- GESTION DEL IDIOMA DE LA APLIACION -->
+	<managed-bean>
+		<description>GESTION DINAMICA POR PARTE DEL USUARIO DEL IDIOMA DE LA APLICACION</description>
+		<managed-bean-name>idioma_bean</managed-bean-name>
+		<managed-bean-class>com.atrium.managedbean.Idioma_Bean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<!-- ******* FIN ZONA DE MANAGEDBEAN ********** -->
+
+</faces-config>
